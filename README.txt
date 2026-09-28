@@ -1,5 +1,5 @@
 SOTW HUD Unlock
-Version 2.1.0
+Version 2.2.0
 
 This mod shows three HUD elements in Skyrim Special Edition:
 - the compass
@@ -39,34 +39,50 @@ This mod does three things:
 The mod has one plugin and one settings file:
 - SOTW_HUDUnlock.esp: the plugin. It has four global variables. It has
   no scripts.
-- MCM\Config\ImmersiveHUD\settings.ini: the ImmersiveHUD settings file.
-  One value is different: [Crosshair] bEnabled = 0.
+- MCM\Settings\ImmersiveHUD.ini: the ImmersiveHUD user settings file.
+  One value turns the Contextual Crosshair function off:
+  [Crosshair] bEnabled = 0.
+
+ImmersiveHUD reads its default settings file first and this user settings
+file after it. The user settings file wins. No other mod contains this
+file. Therefore no file conflict occurs.
 
 
 INSTALLATION (VORTEX)
 1. Close Skyrim.
 2. Start Vortex.
 3. Click "Mods".
-4. Click "Install From File".
-5. Select the file "SOTW HUD Unlock-2.1.0.zip".
-6. Click "Enable".
-7. Click "Deploy Mods".
-8. If Vortex shows a file conflict for the file settings.ini, set
-   SOTW HUD Unlock to win the conflict. Two mods contain this file:
-   ImmersiveHUD SKSE and SOTW HUD Unlock.
+4. If the mod list contains an older version of this mod ("SOTW Compass
+   and Sneak Perks" or "SOTW HUD Unlock"), remove it.
+5. Click "Install From File".
+6. Select the file "SOTW HUD Unlock-2.2.0.zip".
+7. Click "Enable".
+8. Click "Deploy Mods".
 9. Start Skyrim.
 
-If the file conflict stays unresolved, the Contextual Crosshair function
-stays on. You can turn it off in the game:
-1. Open the ImmersiveHUD MCM.
-2. Open the "General" page.
-3. Turn off "Contextual Crosshair".
+
+WHAT YOU SEE IN THE GAME
+- The compass shows with the HUD (new game).
+- The sneak meter shows when you sneak (new game). The text HIDDEN or
+  DETECTED shows when your detection state changes.
+- The crosshair shows when the HUD shows. If you hide the HUD, the
+  crosshair hides too.
+- The skill menu shows Spatial Awareness and Sixth Sense as owned (new
+  game). You do not have to buy them.
 
 
-NEW GAME OR OLD SAVE
-- A new game reads the plugin values. The elements show immediately.
-- An old save keeps its own values. If the elements stay hidden, open the
-  console and type these commands:
+NEW GAME AND EXISTING SAVES
+- The crosshair fix comes from a settings file. It works in a new game
+  and in an existing save.
+- The compass and the sneak meter come from plugin values. These values
+  apply to a new game only. An existing save keeps its own values for
+  these two elements. Skyrim stores the values of all global variables in
+  each save file. The game applies the stored values when it loads the
+  save. A plugin cannot change them in an existing save.
+- This mod does not change your save files.
+- Note: a player who wants to change these values in an existing save can
+  open the console (the ~ key) and type these commands. This is not
+  necessary for a new game.
 
     set iHUD_DisableCompass to 0
     set iHUD_DisableSneak to 0
@@ -74,17 +90,8 @@ NEW GAME OR OLD SAVE
     set _WWW_PerkRank_SixthSense to 1
 
 
-WHAT YOU SEE IN THE GAME
-- The compass shows with the HUD.
-- The sneak meter shows when you sneak. The text HIDDEN or DETECTED shows
-  when your detection state changes.
-- The crosshair shows when the HUD shows. If you hide the HUD, the
-  crosshair hides too.
-- The skill menu shows Spatial Awareness and Sixth Sense as owned. You do
-  not have to buy them.
-
-
 WORDS
+- console: the command line in the game. Press the ~ key to open it.
 - crosshair: the small mark in the center of the screen. You use it to aim.
 - global variable: a value in a plugin. Other plugins and scripts can read it.
 - HUD: head-up display. The compass, the bars, and the crosshair are HUD elements.
@@ -95,12 +102,15 @@ WORDS
 
 FILES IN THE ZIP
 - SOTW_HUDUnlock.esp: the plugin
-- MCM\Config\ImmersiveHUD\settings.ini: the ImmersiveHUD settings file
+- MCM\Settings\ImmersiveHUD.ini: the ImmersiveHUD user settings file
 - README.txt: this file
 - LICENSE: the license
 
 
 VERSIONS
+- 2.2.0: The crosshair fix uses the ImmersiveHUD user settings file. No
+  file conflict. The README explains the new game limit of the compass
+  and sneak meter fixes.
 - 2.1.0: Show the crosshair. New name and new README.
 - 2.0.0: Show the compass and the sneak meter.
 
