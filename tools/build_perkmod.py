@@ -19,7 +19,7 @@ import os
 import struct
 import sys
 
-VERSION = "2.2.0"
+VERSION = "2.2.1"
 AUTHOR = "eyenalxai"
 SNAM = (
     "SOTW HUD Unlock %s. Shows the compass, the sneak meter and the crosshair "

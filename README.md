@@ -1,6 +1,6 @@
 # SOTW HUD Unlock
 
-Version 2.2.0
+Version 2.2.1
 
 This mod shows three HUD elements in Skyrim Special Edition.
 
@@ -27,6 +27,10 @@ removes both limits.
 4. Click Install From File and select the zip file.
 5. Click Enable and then Deploy Mods.
 6. Start Skyrim.
+
+If Vortex shows a file conflict for MCM/Settings/ImmersiveHUD.ini, set
+SOTW HUD Unlock as the winner for that file. The crosshair fix needs our
+copy.
 
 ## New game and existing saves
 
