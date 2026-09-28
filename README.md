@@ -2,11 +2,8 @@
 
 Version 2.2.1
 
-This mod shows three HUD elements in Skyrim Special Edition.
-
-- the compass
-- the sneak meter
-- the crosshair
+This mod shows three HUD elements in Skyrim Special Edition. They are
+the compass, the sneak meter and the crosshair.
 
 Skills of the Wild hides the compass and the sneak meter until you learn
 two skills. ImmersiveHUD hides the crosshair until you aim. This mod
