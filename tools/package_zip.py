@@ -5,9 +5,9 @@ The script reads the files of the mod and writes the versioned zip file
 in the parent folder of this repository. The zip is a build output.
 It is not in this repository.
 
-The README and the license go into the "SOTW HUD Unlock" folder in the
-zip. Other mods ship files with these names too, and the folder keeps
-Vortex free of conflicts for them.
+The zip has only the plugin and the settings file. The README and the
+license stay in this repository and on the release page. This keeps the
+package free of file conflicts with other mods.
 
 Usage:
     python tools/package_zip.py [output_path]
@@ -26,8 +26,6 @@ OUT = (sys.argv[1] if len(sys.argv) > 1
 
 # (source in this repository, path in the zip)
 FILES = [
-    ("LICENSE", "SOTW HUD Unlock/LICENSE"),
-    ("README.txt", "SOTW HUD Unlock/README.txt"),
     ("SOTW_HUDUnlock.esp", "SOTW_HUDUnlock.esp"),
     ("MCM/Settings/ImmersiveHUD.ini", "MCM/Settings/ImmersiveHUD.ini"),
 ]
