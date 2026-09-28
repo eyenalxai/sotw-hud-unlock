@@ -8,9 +8,11 @@ This mod shows three HUD elements in Skyrim Special Edition:
 - the sneak meter (the eye and the HIDDEN / DETECTED text)
 - the crosshair
 
-## Download
+## Build
 
-Download the file `SOTW HUD Unlock-2.1.0.zip` from the Releases page.
+Run `python tools/build_perkmod.py`. The script writes the file
+`SOTW_HUDUnlock.esp` in the repository root. This file is a build output.
+It is not in this repository.
 
 ## Requirements
 
@@ -106,7 +108,6 @@ set _WWW_PerkRank_SixthSense to 1
 
 ## Files in this repository
 
-- `SOTW_HUDUnlock.esp` - the plugin
 - `MCM/Config/ImmersiveHUD/settings.ini` - the ImmersiveHUD settings file
 - `tools/build_perkmod.py` - the script that builds the plugin
 - `README.txt` - the same text as a plain text file
